@@ -1,6 +1,6 @@
-# React + Vite
+# Sustainability Cell IITB React Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Currently Under Construction
 
 Currently, two official plugins are available:
 
