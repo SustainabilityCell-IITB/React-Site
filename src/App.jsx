@@ -5,8 +5,10 @@ import './assets/app.css'
 
 
 function App() {
+
   return (
     <>
+      <h1>SCell React Site</h1>
     <Implementations/>
     </>
   )
