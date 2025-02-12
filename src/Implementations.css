@@ -1,0 +1,183 @@
+#implementations{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#implementations button{
+    position: relative;
+    font-size: 70px;
+    font-weight: 900;
+    color: #283E4F;
+    border:none;
+    border-radius: 20px;
+    background-color: transparent;
+    height: 90%;
+    width: 20%;
+    margin: 10px;
+}
+#implementations button:hover{
+    background-color: rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+}
+
+.imp-container{
+    width: 50%;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x:scroll;
+    background-color: #C0D99C;
+    border-radius: 20px;
+    /* box-shadow: 0px 0px 35px black; */
+}
+
+.impH2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50vw;
+}
+
+.impH2 h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    font-family: avocadoBold;
+    font-weight: 700;
+    color: #283E4F;
+    padding: 10px;
+}
+
+.imp-container::-webkit-scrollbar{
+    display: none;
+}
+
+.impBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 90vh;
+    min-width: 50vw;
+    scroll-snap-align: center;
+    /* outline: 1px solid black; */
+}
+
+
+.impBox h3{
+    font-size: 30px;
+    font-family: 'avocadoReg';
+    color: #0F2139;
+    font-weight: 500;
+    border-bottom: 3px solid #0F2139;
+    padding: 10px;
+    margin: 10px;
+}
+
+.impBox img{
+    width: 60%;
+    max-height: 45vh;
+    flex: 1;
+    border-radius: 20px;
+    /* box-shadow: 0 0 30px #485833; */
+}
+
+.impBox p{
+    text-align: justify;
+    padding: 2% 5%;
+    margin: 10px;
+    font-size: 16px;
+    font-family: 'poppins';
+    color: #0F2139;
+    line-height: 25px;
+}
+
+
+@media screen and (max-width: 1215px) {
+    #implementations{
+        height: auto;
+        margin: 10px 0px;
+    }
+    .imp-container{
+        height: 90vh;
+        min-width: 70vw;
+        padding: 10px;
+    }
+    .impBox{
+        height: 100%;
+        min-width: 70vw;
+        margin: 0px 10px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .imp-container{
+        /* height: auto; */
+        width: 80%;
+    }
+    .impBox, .impH2{
+        min-width: 80vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .impBox, .impH2{
+        min-width: 95vw;
+    }
+    .imp-container{
+        min-width: 90vw;
+    }
+
+    .impH2 h2{
+        font-size: 50px;
+    }
+    .impBox p{
+        text-align: justify ;
+    }
+
+    .rightScroll, .leftScroll{
+        position: relative;
+    }
+    .rightScroll{
+        left: -15%;
+    }
+    .leftScroll{
+        left: 15%;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    
+    .imp-container{
+        height: 35em;
+        padding: 40px 5px;
+        width: 95vw;
+    }
+    .impBox h3{
+        font-size: 22px;
+    }
+    .impBox img{
+        width: 70%;
+        max-height: 300px;
+    }
+    .impBox p{
+        font-size: 12px;
+        line-height: 20px;
+        padding: 2% 2%;
+    }
+    .rightScroll, .leftScroll{
+        display: none;
+    }
+    .impH2::after{
+        content: '';
+        height: 50px;
+        width: 50px;
+        background-image: url(../images/rightArrow.webp);
+        background-size: cover;
+        
+    }
+}
+

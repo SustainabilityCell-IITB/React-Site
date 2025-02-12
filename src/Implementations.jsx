@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import impData from "./impData.json";
+import "./Implementations.css";
 
 function ImpBox({ image, title, description }) {
   return (
@@ -14,24 +15,30 @@ function ImpBox({ image, title, description }) {
 function Implementations() {
   const containerRef = useRef(null);
 
+  const getScrollAmount = () => {
+    return window.innerWidth < 768 ? 150 : 300; // Adjust scroll distance based on screen size
+  };
+
   const scrollLeft = () => {
     if (containerRef.current) {
-      containerRef.current.scrollBy({ left: -300, behavior: "smooth" });
+      containerRef.current.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
     }
   };
 
   const scrollRight = () => {
     if (containerRef.current) {
-      containerRef.current.scrollBy({ left: 300, behavior: "smooth" });
+      containerRef.current.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
     }
   };
 
   return (
     <>
-      <section id="implementations">
-        <button className="leftScroll" onClick={scrollLeft}>&#10229;</button>
+      <section id="implementations" className="imp-section">
+        <button className="scrollBtn leftScroll" onClick={scrollLeft}>
+          &#10229;
+        </button>
 
-        <div className="imp-container scale-animate" ref={containerRef} style={{ display: "flex", overflowX: "auto", scrollBehavior: "smooth" }}>
+        <div className="imp-container" ref={containerRef}>
           <div className="impBox impH2">
             <h2>Implementations</h2>
           </div>
@@ -40,7 +47,9 @@ function Implementations() {
           ))}
         </div>
 
-        <button className="rightScroll" onClick={scrollRight}>&#10230;</button>
+        <button className="scrollBtn rightScroll" onClick={scrollRight}>
+          &#10230;
+        </button>
       </section>
     </>
   );

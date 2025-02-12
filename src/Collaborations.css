@@ -1,0 +1,112 @@
+#collaborations{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color:rgb(107, 166, 210);
+}
+
+.collab h2{
+    font-family: avocadoBold;
+    font-size: 60px;
+    font-weight: 700;
+    color: #0F2139;
+    padding: 10px;
+}
+
+.collab hr{
+    width: 50%;
+}
+.collab-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collab-head, .collab-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+.collab-image{
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    width: 300px;
+    /* border: 5px solid black; */
+}
+
+.collab-head h3{
+    font-size: 30px;
+    font-family: 'poppins';
+    color: #0F2139;
+}
+
+.collab-text p{
+    width: 90%;
+    font-size: 16px;
+    color: #0F2139;
+    font-family: 'poppins';
+    line-height: 25px;
+    text-align: justify;
+    padding: 10px;
+    margin: 10px;
+    /* border-bottom: 3px solid #0F2139; */
+}
+br{
+    color: black;
+    height: 100px;
+}
+
+@media screen and (max-width : 1215px) {
+    #collaborations{
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width : 1100px) {
+    .collab-content{
+        flex-direction: column;
+    }
+    .collab-head{
+        width: 100%;
+        flex-direction: row;
+        text-align: center;
+    }
+    .collab-text{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+
+    .collab-image{
+        margin: 10px;
+        height: 25vh;
+        width: 85vw;
+    }
+    .collab-text p{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .collab h2{
+        font-size: 45px;
+        text-align: center;
+    }
+    .collab-head h3{
+        font-size: 22px;
+        padding: 15px;
+    }
+    .collab-text p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+}

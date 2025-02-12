@@ -1,0 +1,83 @@
+#policy{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+.policy-text, .policy-image{
+    height: 100%;
+    width: 50%;
+}
+.policy-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.policy-text h2{
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+    font-family: avocadoBold;
+    margin: 10px;
+    padding: 10px;
+}
+
+.policy-text h3{
+    color: white;
+    font-size: 25px;
+    font-family: avocadoReg;
+    letter-spacing: 1px;
+    margin: 5px ;
+    padding: 5px;
+}
+.policy-text p{
+    color: white;
+    font-family: 'poppins';
+    font-size: 16px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+.policy-image{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media screen and (max-width: 1215px) {
+    #policy{
+        height: auto;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        padding: 30px;
+    }
+    .policy-image, .policy-text{
+        min-height: 400px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #policy{
+        padding: 15px;
+        margin: 30px 0px;
+    }
+
+    .policy-image, .policy-text{
+        min-height: 300px;
+        width: 100%;
+    }
+    .policy-text h2{
+        font-size: 45px;
+    }
+    .policy-text h3{
+        font-size: 22px;
+        text-align: center;
+    }
+    .policy-text p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
